@@ -20,6 +20,22 @@ const fizzBuzz = function (arr) {
 };
 
 
+// Same as previous, but using falsy values
+const fizzBuzz = function (arr) {
+  arr.forEach(num => {
+    if (!(num % 15)) {
+      console.log("Fizz Buzz");
+    } else if (!(num % 5)) {
+      console.log("Buzz");
+    } else if (!(num % 3)) {
+      console.log("Fizz");
+    } else {
+      console.log(num);
+    }
+  });
+};
+
+
 // Alternate using for loop:
 const fizzBuzz = function (arr) {
   for (let i = 0; i < arr.length; i++) {

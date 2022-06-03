@@ -59,6 +59,17 @@ const isPalindrome = function (str) {
 }
 
 
+// Alternate using forward for loop:
+const isPalindrome = function (str) {
+  for (var i = 0; i < str.length; i++) {
+    if (str[i] !== str[str.length - 1 - i]) {
+      return false;
+    }
+  }
+  return true;
+};
+
+
 console.log(isPalindrome("noon"));
 console.log(isPalindrome("racecar"));
 console.log(isPalindrome("RexTheDog"));

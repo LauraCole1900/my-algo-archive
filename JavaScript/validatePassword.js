@@ -20,6 +20,13 @@
 // Output: false
 
 
+// Takes in string
+// Sets boolean for length, uppercase & lowercase
+// Tests each condition
+// If each boolean flips to true, return true
+// Else return false
+
+
 
 // Official solution:
 var isValidPass = function (password) {

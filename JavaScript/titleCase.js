@@ -15,21 +15,21 @@ const titleCase = function (str) {
 
 
 // Alternate using for loop & splitting each word into letters
-// const titleCase = function (str) {
-//   const result = [];
+const titleCase = function (str) {
+  const result = [];
 
-//   const words = str.split(" ");
+  const words = str.split(" ");
 
-//   for (let i = 0; i < words.length; i++) {
-//     const word = words[i].split("");
+  for (let i = 0; i < words.length; i++) {
+    const word = words[i].split("");
 
-//     word[0] = word[0].toUpperCase();
+    word[0] = word[0].toUpperCase();
 
-//     result.push(word.join(""));
-//   }
+    result.push(word.join(""));
+  }
 
-//   return result.join(" ");
-// };
+  return result.join(" ");
+};
 
 
 const titleCaseWithBasicStyleguide = function (str) {

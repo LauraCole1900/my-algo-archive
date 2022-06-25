@@ -10,6 +10,16 @@ const oddOrEven = function (num) {
 };
 
 
+// Alternate using truthy/falsy values
+const oddOrEven = function(num) {
+  if (num % 2) {
+    return "odd"
+  } else {
+    return "even"
+  }
+};
+
+
 // Alternate using ternary:
 const oddOrEven = function (num) {
   return num % 2 === 0 ? "even" : "odd";

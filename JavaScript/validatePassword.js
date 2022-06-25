@@ -22,9 +22,36 @@
 
 // Takes in string
 // Sets boolean for length, uppercase & lowercase
-// Tests each condition
+// Iterates over password
+// Tests each condition for each letter
 // If each boolean flips to true, return true
 // Else return false
+
+
+const isValidPass = (password) => {
+  let length = false;
+  let uppers = false;
+  let lowers = false;
+
+  if (password.length >= 8) {
+    length = true;
+  }
+
+  if (length) {
+    for (let i = 0; i < password.length; i++) {
+      if (password[i].toLowerCase() === password[i]) {
+        lowers = true;
+      }
+      if (password[i].toUpperCase() === password[i]) {
+        uppers = true
+      }
+      if (lowers && uppers) {
+        return true;
+      }
+    }
+  }
+  return false;
+}
 
 
 
@@ -48,3 +75,9 @@ var isValidPass = function (password) {
 
   return hasLower && hasUpper;
 };
+
+
+console.log(isValidPass("RexTheDog"));
+console.log(isValidPass("rexthedog"));
+console.log(isValidPass("REXTHEDOG"));
+console.log(isValidPass("Dog"));

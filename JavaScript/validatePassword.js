@@ -51,7 +51,7 @@ const isValidPass = (password) => {
     }
   }
   return false;
-}
+};
 
 
 
@@ -81,3 +81,41 @@ console.log(isValidPass("RexTheDog"));
 console.log(isValidPass("rexthedog"));
 console.log(isValidPass("REXTHEDOG"));
 console.log(isValidPass("Dog"));
+
+
+// Using regex, with added numbers validator
+const isValidPass = (password) => {
+  let length = false;
+  let uppers = false;
+  let lowers = false;
+  let numbers = false;
+
+  if (password.length >= 8) {
+    length = true;
+  }
+
+  if (length) {
+    for (let i = 0; i < password.length; i++) {
+      if (/^[0-9]+$/.test(password[i])) {
+        numbers = true;
+      }
+      if (/^[a-z]+$/.test(password[i])) {
+        lowers = true;
+      }
+      if (/^[A-Z]+$/.test(password[i])) {
+        uppers = true
+      }
+      if (numbers && lowers && uppers) {
+        return true;
+      }
+    }
+  }
+  return false;
+};
+
+
+console.log(isValidPass("RexTheDog"));
+console.log(isValidPass("rexthedog"));
+console.log(isValidPass("REXTHEDOG"));
+console.log(isValidPass("Dog"));
+console.log(isValidPass("AnswerToLifeIs42"));

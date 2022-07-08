@@ -1,5 +1,3 @@
-//! Incomplete!!!
-
 // Write code to create a function that accepts a string and returns all permutations of that string
 
 

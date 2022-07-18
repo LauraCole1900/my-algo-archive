@@ -4,3 +4,18 @@
 // TODO: Complete the function below:
 
 var maxProfit = function (prices) { };
+
+
+// Official solution
+var maxProfit = function (prices) {
+  var smallest = Infinity;
+  var bestProfit = 0;
+
+  for (var i = 0; i < prices.length; i++) {
+    var price = prices[i];
+    smallest = Math.min(smallest, price);
+    bestProfit = Math.max(bestProfit, price - smallest);
+  }
+
+  return bestProfit;
+};

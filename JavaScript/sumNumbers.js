@@ -22,7 +22,29 @@ function sumNums(num) {
     total += i;
   }
   return total;
-}
+};
+
+
+function sumNums(num) {
+  var total = 0;
+  var n = 0;
+  while (n <= num) {
+    total = total + n;
+    n++;
+  }
+  return total;
+};
+
+
+function sumNums(num) {
+  var total = 0;
+  while (num > 0) {
+    total = total + num;
+    num--;
+  }
+  return total;
+};
+
 
 console.log(sumNums(5));
 console.log(sumNums(2));
